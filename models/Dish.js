@@ -1,15 +1,15 @@
-const moongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-const DishScehma = new moongoose.Schema({
+const DishSchema = new mongoose.Schema({
     name:{ type: String, require: true },
     ingredients:[String],
-    preperationsStep: {type: String},
+    preperationStep: {type: String},
     cookingTime: {type: String },
     origin: {type: String},
     difficulty: String,
     createdAt: {type:Date,default:Date.now}
 });
 
-const Dish = moongoose.model("Dish",DishScehma);
+const Dish = mongoose.model("Dish",DishSchema);
 
 module.exports = Dish;
