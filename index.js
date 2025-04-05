@@ -1,17 +1,31 @@
-require("dotenv").config();
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require("dotenv");
+const path = require("path");
 
-const dishRoutes = require("./routes/dishRoutes");
+dotenv.config();
 
 const app = express();
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_STRING, {useNewUrlParser: true,useUnifiedTopology: true})
-    .then(() => console.log("Connection do MongoDB sucess."))
-    .catch((err) => console.error("Database connection error",err));
-
+const dishRoutes = require("./routes/dishRoutes");
 app.use("/api/dishes",dishRoutes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Seriver running on ${PORT}`));
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.use((req, res) => {
+    res.status(404).send("404 - Page Not Found");
+});
+
+mongoose.connect(process.env.MONGO_STRING)
+    .then(() => {
+        console.log("Connection do MongoDB success.")
+
+        const PORT = process.env.PORT || 5055;
+        app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+    })
+    .catch((err) => {
+        console.error("Database connection error",err);
+    });
