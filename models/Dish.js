@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const DishSchema = new mongoose.Schema({
     name:{ type: String, require: true },
     ingredients:[String],
-    preperationStep: {type: String},
+    preparationSteps: {type: String},
     cookingTime: {type: String },
     origin: {type: String},
     difficulty: String,
