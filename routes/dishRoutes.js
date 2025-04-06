@@ -4,11 +4,9 @@ const dishController = require("../controller/dishControl");
 
 
 router.get("/", dishController.getAll);
-/* Crud routes go here like:
-router.get("/:name, dishController.NAME OF THE OPERATION")
-router.post("/ dishController.NAME OF THE OPERATION")
-router.put("/:id, dishController.NAME OF THE OPERATION")
-router.delete("/:id, dishController.NAME OF THE OPERATION")
-*/
+router.get("/:name", dishController.getDishName);
+router.post("/", dishController.addDish);
+router.put("/:id", dishController.updateDish);
+router.delete("/:id", dishController.deleteDish);
 
 module.exports = router;
