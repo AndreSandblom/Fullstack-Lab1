@@ -25,7 +25,7 @@ const addDishes = [
         preparationSteps: "Mix Egg and Milk, add Flour and salt. Cook on medium heat",
         cookingTime:"20 minutes",
         origin:"Ancient Greece",
-        difficulty:""
+        difficulty:"Medium"
     },
     {
         name: "Pasta Pesto",
