@@ -1,7 +1,10 @@
+// File used to populate the database, logic also clears databae before applying new recipe to avoid duplicates
+// Call node /seed/adddDishes.js
 require("dotenv").config();
 const mongoose = require("mongoose");
 const Dish = require("../models/Dish.js");
 
+// Creating five different recipes to pipulate the database with
 const addDishes = [
     {
         name: "Fish n Chips",
@@ -45,6 +48,7 @@ const addDishes = [
     }
 ];  
 
+// Function to be called to actually create the recipse and adding them to the database
 const seedDB = async() => {
     try {
         await mongoose.connect(process.env.MONGO_STRING);
@@ -57,4 +61,5 @@ const seedDB = async() => {
     }
 };
 
+// Calling the function inside of the file to be able to use it from terminal
 seedDB();

@@ -1,5 +1,7 @@
 const Dish = require("../models/Dish");
 
+
+// Logic for routing all the dishes 
 const getAll = async (req,res) => {
     try{
         // Return all the dishes
@@ -10,6 +12,7 @@ const getAll = async (req,res) => {
     }
 };
 
+// Logic for routing getting a dish by name
 const getDishName = async (req,res) => {
     try {
         const { name } = req.params;
@@ -28,6 +31,7 @@ const getDishName = async (req,res) => {
     }
 };
 
+// Logic for routing adding a new dish
 const addDish = async (req,res) => {
     try{
         const newDish = req.body;
@@ -50,6 +54,7 @@ const addDish = async (req,res) => {
     }
 };
 
+// Logic for routing the updating of a dish 
 const updateDish = async (req,res) => {
     try{
         const { id } = req.params;
@@ -70,6 +75,7 @@ const updateDish = async (req,res) => {
     }
 };
 
+// Logic for routing the deletion of a dish 
 const deleteDish = async (req,res) => {
     try{
         const { id } = req.params;
@@ -89,6 +95,7 @@ const deleteDish = async (req,res) => {
     }
 };
 
+// Collection all the exports
 module.exports = {
     getAll,
     getDishName,

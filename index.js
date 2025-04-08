@@ -1,3 +1,4 @@
+// File that sets up the server and connects to the database
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require("dotenv");

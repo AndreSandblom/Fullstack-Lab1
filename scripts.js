@@ -1,7 +1,11 @@
+// Script file with html logic
+
+// Getting all the dishes when page has been loaded
 document.addEventListener("DOMContentLoaded", () => {
     fetchDishes();
 });
 
+// Function for fetching the dishes to be displayed
 async function fetchDishes() {
     try {
         const response = await fetch("/api/dishes");
@@ -17,6 +21,7 @@ async function fetchDishes() {
     }
 }
 
+// Function to build the recipes and creating the form for the html
 function showDishes(dishes) {
     console.log("Dishes:,",dishes);
     const tableBody = document.getElementById("dishBody");
@@ -49,6 +54,7 @@ function showDishes(dishes) {
     });
 }
 
+// Function to add logic to the delete button
 async function deleteDish(dishId){
     const confirmation = confirm("Delete dish?");
     if (!confirmation) return;
@@ -69,6 +75,7 @@ async function deleteDish(dishId){
     }
 }
 
+// Function to add logic to the update button
 async function updateDish(dishId, name, ingredients, steps, time, origin, difficulty){
     const confirmation = confirm("Update dish recipe?")
     if (!confirmation) return;
@@ -104,6 +111,7 @@ async function updateDish(dishId, name, ingredients, steps, time, origin, diffic
     }
 }
 
+// Function to add logic to the new dish filling out the form
 document.getElementById("addDish").addEventListener("submit",async function (e) {
   e.preventDefault();
   
