@@ -1,0 +1,28 @@
+Labb1 Fullstack Course- André Sandblom
+
+Challanges- 
+Getting a clear overview on how different things (both frameworks and different "programs" are connectied and talking to each other).
+Examples are the database MongoDB and then server and then the backend and lastly the frontend.
+
+Another thing that needed a little bit of brainpower was to creation of the different files to seperarte the logic.
+Examples are the index.js file and the division of controllers and routes (previous only had everything in the same file).
+Lastly i also had some problem solving that wasnt that clear is how running things on ports can get them occupied and even stuck sometimes needing to restart everything to make sure.
+So gonna keep that in mind going forward that just becouse i "start" a server on the designated port it can be blocked by something else that ran on that before. 
+
+Solutions and Learnings-
+For overcoming the challanges mentioned above the best description would be that i just hunkered down and really just sat with the problems to really figure out why it is.
+Then starting searching around for different potential solutions and trying to grasp the just why things are done in this manner and what are the best practices.
+For example using promises or async/await and the potential advantages and drawbacks.
+Another thing would as mentioned in the challanges part was to try to get a birds eye view on how all the things are connected and working together.
+And of course the why and to break down the code base into a more manageable and scalable modules which made it easier to both udnerstand what each part do seperattly.
+But also understanding that if i would scale it up it would be easier to add/modify things in these parts than to try to change things in one or two big files.
+
+Would i do things differently?
+Thinking about this question i cant really see how i would do things differently, for this labb i feel good about myself in that sense that i acutally took the time and sat and thought about the problems.
+Then moved over to finding a solution (and even though it might not have been me) to then really understanding the solution and even more importantly why the solution work. 
+So trying to think on how i would do things differently is hard since i feel there is (atleast now) a quite clear "main road" when it comes to these operations and the framework around it.
+So learning that as deep as one could for this labb was crucial and got me excited to apply it on the fourtcoming project with new understandning and knowledge. 
+
+Last words-
+In generell a good labb with a clear scope what im gonna do but most importantly the feeling of that this is something that is really usefull.
+Which in turn made it fun to learn and really sat with the different challanges that arose to really understanding what is happening and why. 
