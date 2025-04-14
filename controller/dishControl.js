@@ -12,6 +12,23 @@ const getAll = async (req,res) => {
     }
 };
 
+
+const getDishId = async (req,res) => {
+    try {
+        const { id } = req.params;
+        const dish = await Dish.findById(id);
+
+        if (!dish) {
+            res.status(404).json({message: "Dish not found"});
+        }
+        
+        res.status(200).json(dish);
+
+    } catch (error){
+        console.error(error);
+        res.status(500).json({message: "Something went wrong", error});
+    }
+}
 // Logic for routing getting a dish by name
 const getDishName = async (req,res) => {
     try {
@@ -98,6 +115,7 @@ const deleteDish = async (req,res) => {
 // Collection all the exports
 module.exports = {
     getAll,
+    getDishId,
     getDishName,
     addDish,
     updateDish,
